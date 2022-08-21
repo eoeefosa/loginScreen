@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: Homepage(),
     );
   }
@@ -26,7 +26,7 @@ class Homepage extends StatefulWidget {
 class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: const LoginScreen());
+    return const Scaffold(body: LoginScreen());
   }
 }
 
@@ -45,8 +45,8 @@ class _LoginScreenState extends State<LoginScreen> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: const [
-          Text(
+        children: [
+          const Text(
             'MyApp Title',
             style: TextStyle(
               color: Colors.black,
@@ -54,7 +54,7 @@ class _LoginScreenState extends State<LoginScreen> {
               fontWeight: FontWeight.bold,
             ),
           ),
-          Text(
+          const Text(
             'Login to your App',
             style: TextStyle(
               color: Colors.black,
@@ -62,17 +62,56 @@ class _LoginScreenState extends State<LoginScreen> {
               fontWeight: FontWeight.bold,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 44,
           ),
-          TextField(
+          const TextField(
             keyboardType: TextInputType.emailAddress,
             decoration: InputDecoration(
-                hintText: "user Email",
-                prefixIcon: Icon(
-                  Icons.mail,
-                  color: Colors.black,
-                )),
+              hintText: "user Email",
+              prefixIcon: Icon(
+                Icons.mail,
+                color: Colors.black,
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 26.0,
+          ),
+          const TextField(
+            // keyboardType: TextInputType.visiblePassword,
+            obscureText: true,
+            decoration: InputDecoration(
+              hintText: 'User Password',
+              prefixIcon: Icon(Icons.lock),
+            ),
+          ),
+          const SizedBox(
+            height: 12.0,
+          ),
+          const Text(
+            "Don't remember your Password",
+            style: TextStyle(color: Colors.blue),
+          ),
+          const SizedBox(
+            height: 88.0,
+          ),
+          SizedBox(
+            width: double.infinity,
+            child: RawMaterialButton(
+              fillColor: const Color(0xFF0069FE),
+              elevation: 0.0,
+              padding: const EdgeInsets.symmetric(vertical: 20.0),
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
+              onPressed: () {},
+              child: const Text(
+                'Login',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18.0,
+                ),
+              ),
+            ),
           )
         ],
       ),
