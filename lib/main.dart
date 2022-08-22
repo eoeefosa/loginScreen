@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -24,9 +25,23 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
+  Future<FirebaseApp> _initalizefirebase() async {
+    FirebaseApp app = await Firebase.initializeApp();
+    return app;
+  }
+
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(body: LoginScreen());
+    return FutureBuilder(
+        future: _initalizefirebase(),
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.done) {
+            return LoginScreen();
+          }
+          return const Center(
+            child: CircularProgressIndicator(),
+          );
+        });
   }
 }
 
