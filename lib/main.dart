@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:loginscreen/checkout1.dart';
 
 import 'profile_Screen.dart';
 
@@ -146,7 +147,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 User? user = await loginUsingEmailPassword(email: _emailcontroller.text, password: _passwordcontroller.text, context: context);
                 print(user);
                 if (user != null) {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => ProfileScreen()));
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => CheckoutOnePage()));
                 }
               },
               child: const Text(
