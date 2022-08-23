@@ -40,7 +40,7 @@ class CheckoutOnePage extends StatelessWidget {
                         const SizedBox(height: 5.0),
                         Text(
                           "7 days",
-                          style: TextStyle(color: Colors.grey, fontSize: 12.0),
+                          style: TextStyle(color: Colors.grey, fontSize: 14.0),
                         ),
                       ],
                     ),
@@ -64,7 +64,7 @@ class CheckoutOnePage extends StatelessWidget {
                         const SizedBox(height: 5.0),
                         Text(
                           "Per week",
-                          style: TextStyle(color: Colors.grey, fontSize: 12.0),
+                          style: TextStyle(color: Colors.grey, fontSize: 14.0),
                         ),
                       ],
                     ),
@@ -87,13 +87,13 @@ class CheckoutOnePage extends StatelessWidget {
                       children: [
                         Text(
                           "\$900",
-                          style: TextStyle(fontWeight: FontWeight.bold),
+                          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
                           textScaleFactor: 1.2,
                         ),
                         const SizedBox(height: 5.0),
                         Text(
                           "Per month",
-                          style: TextStyle(color: Colors.grey, fontSize: 12.0),
+                          style: TextStyle(color: Colors.white, fontSize: 14.0),
                         ),
                       ],
                     ),
@@ -117,7 +117,7 @@ class CheckoutOnePage extends StatelessWidget {
                         const SizedBox(height: 5.0),
                         Text(
                           "Lifetime",
-                          style: TextStyle(color: Colors.grey, fontSize: 12.0),
+                          style: TextStyle(color: Colors.grey, fontSize: 14.0),
                         ),
                       ],
                     ),
@@ -125,6 +125,11 @@ class CheckoutOnePage extends StatelessWidget {
                 ),
               ],
             ),
+            const SizedBox(height: 30.0),
+            Container(
+              decoration: BoxDecoration(border: Border.all(), borderRadius: BorderRadius.circular(10.0)),
+              padding: EdgeInsets.all(8.0),
+            )
           ],
         ),
       ),
