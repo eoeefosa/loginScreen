@@ -63,7 +63,7 @@ class CheckoutOnePage extends StatelessWidget {
                         ),
                         const SizedBox(height: 5.0),
                         Text(
-                          "7 days",
+                          "Per week",
                           style: TextStyle(color: Colors.grey, fontSize: 12.0),
                         ),
                       ],
@@ -71,7 +71,60 @@ class CheckoutOnePage extends StatelessWidget {
                   ),
                 ),
               ],
-            )
+            ),
+            Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 8.0),
+                    decoration: BoxDecoration(
+                      color: Colors.indigo,
+                      borderRadius: BorderRadius.circular(10.0),
+                      border: Border.all(),
+                    ),
+                    padding: EdgeInsets.all(8.0),
+                    child: Column(
+                      children: [
+                        Text(
+                          "\$900",
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                          textScaleFactor: 1.2,
+                        ),
+                        const SizedBox(height: 5.0),
+                        Text(
+                          "Per month",
+                          style: TextStyle(color: Colors.grey, fontSize: 12.0),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 8.0),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10.0),
+                      border: Border.all(),
+                    ),
+                    padding: EdgeInsets.all(8.0),
+                    child: Column(
+                      children: [
+                        Text(
+                          "\$2000",
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                          textScaleFactor: 1.2,
+                        ),
+                        const SizedBox(height: 5.0),
+                        Text(
+                          "Lifetime",
+                          style: TextStyle(color: Colors.grey, fontSize: 12.0),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
