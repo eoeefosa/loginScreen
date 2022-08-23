@@ -25,7 +25,11 @@ class CheckoutOnePage extends StatelessWidget {
                 Expanded(
                   child: Container(
                     margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 8.0),
-                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(16.0)),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10.0),
+                      border: Border.all(),
+                    ),
+                    padding: EdgeInsets.all(8.0),
                     child: Column(
                       children: [
                         Text(
@@ -45,7 +49,11 @@ class CheckoutOnePage extends StatelessWidget {
                 Expanded(
                   child: Container(
                     margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 8.0),
-                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(16.0)),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10.0),
+                      border: Border.all(),
+                    ),
+                    padding: EdgeInsets.all(8.0),
                     child: Column(
                       children: [
                         Text(
