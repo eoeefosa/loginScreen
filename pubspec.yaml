@@ -12,6 +12,8 @@ dependencies:
 
 
   cupertino_icons: ^1.0.2
+  icon: ^2.2.1
+  ionicons: ^0.2.1
   firebase_core: ^1.21.0
   firebase_auth: ^3.6.4
 
